@@ -6,9 +6,6 @@
 
 header {
     display: flex;
-    flex-direction: row;
-    align-self: self-end;
-    justify-content: flex-end;
     height: 50px;
     background-color: grey;
 }
@@ -22,19 +19,56 @@ body {
     height: 100%;
 }
 
-a {
-    text-decoration: none;
-    color: black;
+h1 {
+    display: flex;
+    justify-content: center;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+}
+
+
 li {
-    margin: 2px 2px 2px 2px;
+    margin: 5px 20px 10px 20px;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
 }
 
 .menu {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
+    transform: translate(250%);
     font: 1em;
     text-decoration: none;
     list-style-type: none;
+}
+
+.container {
+    max-width: 1200px; /* Limita a largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner */
+    display: grid; /* Ativa o grid layout */
+    grid-template-columns: 0.7fr 1fr 1fr; /* Define 3 colunas, a primeira menor */
+    grid-template-rows: auto auto auto; /* Altura automática para cada linha */
+    grid-template-areas:
+        "sidenav item1 item2"
+        "sidenav item3 item4"
+        "footer footer footer"; /* Define as áreas nomeadas para cada elemento */
+    gap: 20px; /* Espaçamento entre as áreas do grid */
+    padding: 20px;
+    border: 1px solid #fff; /* Bordas para destacar o contêiner */
+}
+
+.sidenav {
+    grid-area: sidenav; /* Define a área do grid que a barra lateral ocupará */
+    background-color: #1E3A8A; /* Fundo azul escuro */
+    color: #F0F4FF; /* Cor do texto em azul claro */
+    border-radius: 20px; /* Bordas arredondadas */
+    padding: 20px;
 }
