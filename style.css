@@ -25,7 +25,6 @@ h1 {
 }
 
 a {
-    text-decoration: none;
     color: white;
     font-size: 1.5em;
 }
@@ -33,6 +32,11 @@ a {
 
 li {
     margin: 5px 20px 10px 20px;
+}
+
+img {
+    object-fit: contain;
+    height: 300px;
 }
 
 .logo {
@@ -44,7 +48,7 @@ li {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    transform: translate(250%);
+    transform: translate(300%);
     font: 1em;
     text-decoration: none;
     list-style-type: none;
@@ -71,38 +75,20 @@ li {
     color: #F0F4FF; /* Cor do texto em azul claro */
     border-radius: 20px; /* Bordas arredondadas */
     padding: 20px;
-    text-wrap: nowrap;
+    text-wrap: wrap;
 }
 
-.item1 {
+.foto {
     grid-area: item1;
-    background-color: #1E3A8A;
-    border-radius: 20px;
-    padding: 20px;
-}
-
-.item2 {
-    grid-area: item2;
-    background-color: #1E3A8A;
-    border-radius: 20px;
-    padding: 20px;
-}
-
-.item3 {
-    grid-area: item3;
-    background-color: #1E3A8A;
-    border-radius: 20px;
-    padding: 20px;
-}
-
-.item4 {
-    grid-area: item4;
-    background-color: #1E3A8A;
+    background-color: #848484;
     border-radius: 20px;
     padding: 20px;
 }
 
 .foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     grid-area: footer;
     background-color: #1E3A8A;
     border-radius: 20px;
