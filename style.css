@@ -8,11 +8,14 @@ header {
     display: flex;
     height: 50px;
     background-color: grey;
+    padding: 5px 5px;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #393434; /* Cor de fundo do site */
+    background-image: url(images/background.jpeg);
+    background-size: 150%;
+    background-repeat: no-repeat;
     color: #fff; /* Cor do texto */
     line-height: 1.6; /* Espaçamento entre linhas de texto */
     width: 100%;
@@ -36,7 +39,18 @@ li {
 
 img {
     object-fit: contain;
-    height: 300px;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 20px;
+    top: 0px;
+}
+
+li {
+    color: white;
+}
+
+li:hover {
+    color: black;
 }
 
 .logo {
@@ -48,7 +62,7 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    transform: translate(300%);
+    transform: translatex(250%);
     font: 1em;
     text-decoration: none;
     list-style-type: none;
@@ -63,34 +77,43 @@ img {
     grid-template-areas:
         "sidenav item1 item2"
         "sidenav item3 item4"
-        "footer footer footer"; /* Define as áreas nomeadas para cada elemento */
-    gap: 20px; /* Espaçamento entre as áreas do grid */
+        "footer footer footer";
+    gap: 20px;
     padding: 20px;
-    border: 1px solid #fff; /* Bordas para destacar o contêiner */
+    border: 1px transparent;
 }
 
-.sidenav {
-    grid-area: sidenav; /* Define a área do grid que a barra lateral ocupará */
-    background-color: #1E3A8A; /* Fundo azul escuro */
-    color: #F0F4FF; /* Cor do texto em azul claro */
-    border-radius: 20px; /* Bordas arredondadas */
+.sidenav /*selector*/{
+    grid-area/**/: sidenav;/*value*//*declaration*/
+    background-color: #A34E60;
+    color: #F0F4FF;
+    border-radius: 20px;
     padding: 20px;
     text-wrap: wrap;
 }
 
-.foto {
+.foto:nth-child(1) {grid-area: item1;}
+.foto:nth-child(2) {grid-area: item2;}
+.foto:nth-child(3) {grid-area: item3;}
+.foto:nth-child(4) {grid-area: item4;}
+
+
+.foto/*selector*/ {
     grid-area: item1;
-    background-color: #848484;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #A34E60;
     border-radius: 20px;
-    padding: 20px;
 }
 
-.foot {
+.foot /*selector*/ {
     display: flex;
     flex-direction: column;
     align-items: center;
     grid-area: footer;
-    background-color: #1E3A8A;
+    background-color: #4E4043;
     border-radius: 20px;
     padding: 20px;
 }
